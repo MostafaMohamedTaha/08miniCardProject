@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 1rem sans-serif;
+    min-height: 100vh;
+    background-color: #333;
+    color: aliceblue;
+    background-image: radial-gradient(whitesmoke, #333);
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, main, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+
+
+}
+
+header, footer {
+    position: sticky;
+    background-color: #333;
+
+}
+
+main {
+    flex-grow: 1;
+    font-size: 2rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding:1rem;
+    flex-direction: column;
+
+}
+
+nav {
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a,
+nav a:visited {
+    color: #000;
+    font-size: 1.5rem;
+}
+nav a:hover,
+nav a:focus{
+    color: hsla(0,0%,0%,.6);
+}
+@media screen and (min-width:481px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }
+    nav {
+        display: none;
+    }
+
+}
+@media screen and (min-width:768px) {
+    body {
+        background-color: rgb(49, 53, 49);
+        background-image: radial-gradient(whitesmoke, rgb(55, 22, 154));
+    }
+    nav {
+        display: none;
+    }
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+
+    }
+    .card {
+        width:min(100%,400px)
+    }
+    .card:last-child {
+        order: -1;
+    }
+}
+@media screen and (min-width:1024px) {
+    body {
+        background-color: rgb(49, 53, 49);
+        background-image: radial-gradient(whitesmoke, rgb(154, 99, 22));
+    }
+    nav {
+        display: none;
+    }
+
+}
+@media screen and (max-height:325px) {
+    body {
+        background-color: rgb(49, 53, 49);
+        background-image: radial-gradient(whitesmoke, rgb(207, 33, 33));
+    }
+    nav {
+        display: none;
+    }
+
+}
+img {
+    width:500px;height: 500px;
+    display: block;
+    max-width: 100%;
+    
+}
+.nowrap {
+    white-space: nowrap;
+}
+.card {
+    scroll-margin-top: 8rem;
+    width:min(100%,350px);
+    background-color: gray;
+    border:2px solid #000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.card img {
+    border: 5px double #333;
+    border-radius: 50%;
+}
+.card figcaption {
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
